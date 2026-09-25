@@ -28,12 +28,9 @@ def ping():
     except ValueError:
         return "Invalid IP address", 400
 
-    result = subprocess.run(
-        ["ping", "-c", "1", host],
-        capture_output=True,
-        check=False,
-        timeout=5,
-    )
+    PING = "/bin/ping"
+    result = subprocess.run([PING, "-c", "1", host], check=False)
+
     return f"<pre>{escape(result.stdout.decode())}</pre>"
 
 
