@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# custom
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.sarif
+bandit-results.json
